@@ -1,15 +1,16 @@
 *, *:before, *:arter
-    margin: 0
-    padding: 0
     box-sizing: border-box
-body
 
+body
+    max-width: 1600px
+    margin: auto
     font-family: sans-seif
 .header
     display: grid
+    min-height: 810px
     grid-template-columns: 2fr 2fr 1fr 1.1fr
     grid-template-areas: "header-logo . . header-btn-menu" "header-title header-title header-title header-title" ". header-btn-contact header-pic ."
-    grid-template-rows: 2fr 5fr 2.1fr
+    grid-template-rows: 2fr 3fr 4fr
     align-items: center
     justify-items: center
     background-color: rgba(74, 73, 73, 0.5)
@@ -23,3 +24,170 @@ body
     grid-area: header-title
 .header-pic
     grid-area: header-pic
+
+.about
+
+    display: grid
+    min-height: 986px
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: "about-title about-title" "about-carousel about-text"
+    grid-template-rows: 2fr 5fr
+    align-items: center
+    justify-items: center
+    background-color: rgba(123, 12,12 ,0.5 )
+    &-title
+        text-align: center
+        grid-area: about-title
+    &-carousel
+        grid-area: about-carousel
+    &-carousel img
+        height: 50%
+    &-text
+        grid-area: about-text
+
+.featured
+
+    display: grid
+    min-height: 1165px
+    background-color: rgba(66, 43, 90, 0.8)
+    grid-template-rows: 1fr 5fr
+    grid-template-areas: "featured-title" "featured-works"
+    align-items: center
+    justify-items: center
+    &-title
+        grid-area: featured-title
+    &-works
+        display: grid
+        grid-area: featured-works
+        grid-template-rows: 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 10px
+        grid-template-areas: "featured-work-1 featured-work-2 featured-work-3" "featured-work-4 featured-work-5 featured-work-6"
+
+.featured-work-1
+    grid-area: featured-work-1
+.featured-work-2
+    grid-area: featured-work-2
+.featured-work-3
+    grid-area: featured-work-3
+.featured-work-4
+    grid-area: featured-work-4
+.featured-work-5
+    grid-area: featured-work-5
+.featured-work-6
+    grid-area: featured-work-6
+
+.services
+    display: grid
+    min-height: 1620px
+    background-color: rgba(184, 91, 111, 0.5)
+    grid-template-rows: 1fr 5fr
+    grid-template-areas: "services-title" "services-items"
+
+    .services-item-0
+        grid-area: services-item-0
+        display: flex
+        align-content: start
+        background-color: rgb(79, 181, 206)
+    .services-item-1
+        align-self: end
+        justify-self: start
+        grid-area: services-item-1
+    .services-item-2
+        align-self: center
+        justify-self: end
+        grid-area: services-item-2
+
+    .services-item-3
+        align-self: center
+        justify-self: start
+        grid-area: services-item-3
+
+    .services-item-4
+        align-self: start
+        justify-self: end
+        grid-area: services-item-4
+
+    .services-item-5
+        align-self: start
+        justify-self: start
+        grid-area: services-item-5
+
+.services-title
+    grid-area: services-title
+.services-items
+    display: grid
+    grid-area: services-items
+    grid-template-rows: 1fr 1fr 1fr
+    grid-template-columns: 1fr 0.3fr 1fr
+    grid-template-areas: "services-item-0 services-item-0 services-item-1" "services-item-2 services-item-2 services-item-3" "services-item-4 services-item-5 services-item-5 "
+    align-items: center
+    justify-items: center
+
+.service-item-info
+    font-size: 20px
+    color: white
+    position: absolute
+
+.team
+    display: grid
+    min-height: 1310px
+    background-color: rgba(153, 238, 142, 0.5)
+    grid-template-rows: 0.7fr 1fr 1fr
+    grid-template-columns: 1fr 0.5fr 1fr
+    grid-template-areas: "team-title team-title team-title" "team-memb-1 team-memb-2 team-memb-3" "team-memb-4 team-memb-5 team-memb-6"
+    align-items: center
+    justify-items: center
+    &-title
+        grid-area: team-title
+    &-memb-1
+        justify-self: end
+        align-self: end
+        grid-area: team-memb-1
+    &-memb-2
+        align-self: end
+        grid-area: team-memb-2
+    &-memb-3
+        justify-self: start
+        align-self: end
+        grid-area: team-memb-3
+    &-memb-4
+        justify-self: end
+        align-self: start
+        grid-area: team-memb-4
+    &-memb-5
+        align-self: start
+        grid-area: team-memb-5
+    &-memb-6
+        justify-self: start
+        align-self: start
+        grid-area: team-memb-6
+
+.reviews
+    display: grid
+    min-height: 1300px
+    background-color: rgba(240, 207, 118, 0.5)
+    grid-template-rows: 2fr 3fr 2fr
+    grid-template-areas: "reviews-title" "reviews-slider" "reviews-logos"
+    align-items: center
+    justify-items: center
+    &-title
+        grid-area: reviews-title
+    &-slider
+        grid-area: reviews-slider
+    &-logos
+        grid-area: reviews-logos
+.reviews-slider
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: "reviews-slider-avatar" "reviews-slider-text"
+    &-slider-avatar
+        grid-area: reviews-slider-avatar
+    &-slider-text
+        grid-area: reviews-slider-text
+.contacts
+    display: grid
+    min-height: 720px
+    background: no-repeat url("../img/img-contacts-background.png")
+    background-size: cover
+    grid-template-columns: 1fr 1fr

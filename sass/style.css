@@ -5872,7 +5872,7 @@ readers do not read off random characters that represent icons */
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -5885,7 +5885,7 @@ a {
   text-decoration: none;
 }
 
-.title-first, .title-first-featured, .title-first-services {
+.title-first, .title-first-featured, .title-first-services, .title-first-team {
   margin: 0;
   font-size: 38px;
   letter-spacing: 2px;
@@ -5896,18 +5896,22 @@ a {
   text-transform: uppercase;
 }
 
-.title-first-featured, .title-first-featured-featured, .title-first-services-featured {
+.title-first-featured, .title-first-featured-featured, .title-first-services-featured, .title-first-team-featured {
   margin-left: 40px;
   margin-bottom: 15px;
 }
 
-.title-first-services, .title-first-featured-services, .title-first-services-services {
+.title-first-services, .title-first-featured-services, .title-first-services-services, .title-first-team-services {
   margin-left: 0px;
   margin-top: 50px;
   margin-bottom: 10px;
 }
 
-.title-second, .title-second-featured, .title-second-services {
+.title-first-team, .title-first-featured-team, .title-first-services-team, .title-first-team-team {
+  margin-left: 6px;
+}
+
+.title-second, .title-second-featured, .title-second-services, .title-second-team {
   margin: 0;
   font-size: 18px;
   letter-spacing: 2px;
@@ -5919,14 +5923,20 @@ a {
   text-transform: uppercase;
 }
 
-.title-second-featured, .title-second-featured-featured, .title-second-services-featured {
+.title-second-featured, .title-second-featured-featured, .title-second-services-featured, .title-second-team-featured {
   line-height: 20px;
   letter-spacing: 1.3px;
 }
 
-.title-second-services, .title-second-featured-services, .title-second-services-services {
+.title-second-services, .title-second-featured-services, .title-second-services-services, .title-second-team-services {
   line-height: 20px;
   letter-spacing: 1.3px;
+}
+
+.title-second-team, .title-second-featured-team, .title-second-services-team, .title-second-team-team {
+  margin-top: 13px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
 }
 
 .header {
@@ -6229,6 +6239,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .services .services-item-1 {
@@ -6238,6 +6249,7 @@ a {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: services-item-1;
+  position: relative;
 }
 
 .services .services-item-2 {
@@ -6248,6 +6260,7 @@ a {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: services-item-2;
+  position: relative;
 }
 
 .services .services-item-3 {
@@ -6257,6 +6270,7 @@ a {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: services-item-3;
+  position: relative;
 }
 
 .services .services-item-4 {
@@ -6266,6 +6280,7 @@ a {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: services-item-4;
+  position: relative;
 }
 
 .services .services-item-5 {
@@ -6276,6 +6291,7 @@ a {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: services-item-5;
+  position: relative;
 }
 
 .services-title {
@@ -6303,32 +6319,71 @@ a {
   -ms-grid-columns: 1fr 0.23fr 1fr;
       grid-template-columns: 1fr 0.23fr 1fr;
   grid-gap: 1%;
+  justify-items: center;
       grid-template-areas: "services-item-0 services-item-0 services-item-1" "services-item-2 services-item-2 services-item-3" "services-item-4 services-item-5 services-item-5 ";
 }
 
-.service-item-info {
+.service-item-desc-full {
+  display: none;
+}
+
+.service-item-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 29px;
+  color: #ffffff;
+  font-family: "Merriweather";
+  font-weight: 700;
+}
+
+.service-item-info, .service-item-info-1, .service-item-info-2 {
+  margin-left: 64px;
+  margin-top: 10.6%;
   font-size: 20px;
   color: white;
   position: absolute;
 }
 
+.service-item-info-1, .service-item-info-1-1, .service-item-info-2-1 {
+  margin-top: 9.0%;
+}
+
+.service-item-info-2, .service-item-info-1-2, .service-item-info-2-2 {
+  margin-top: 6.5%;
+}
+
+.service-item-desc {
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 25px;
+  color: #ffffff;
+  font-family: "Raleway";
+  font-weight: 400;
+}
+
 .team {
   display: -ms-grid;
   display: grid;
-  min-height: 1310px;
+  min-height: 172vh;
   background-color: rgba(153, 238, 142, 0.5);
-  -ms-grid-rows: 0.7fr 1fr 1fr;
-      grid-template-rows: 0.7fr 1fr 1fr;
-  -ms-grid-columns: 1fr 0.6fr 1fr;
-      grid-template-columns: 1fr 0.6fr 1fr;
+  -ms-grid-rows: 0.33fr 1fr 1fr;
+      grid-template-rows: 0.33fr 1fr 1fr;
+  -ms-grid-columns: 1fr  0.7fr 1fr;
+      grid-template-columns: 1fr  0.7fr 1fr;
       grid-template-areas: "team-title team-title team-title" "team-memb-1 team-memb-2 team-memb-3" "team-memb-4 team-memb-5 team-memb-6";
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  grid-gap: 1%;
+  text-align: center;
 }
 
 .team-title {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;

@@ -1,61 +1,205 @@
+$fa-font-path: '../node_modules/@fortawesome/fontawesome-free/webfonts'
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome'
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid'
+@import '../node_modules/@fortawesome/fontawesome-free/scss/regular'
+
 *, *:before, *:arter
     box-sizing: border-box
-
+img
+    width: 100%
+    height: auto
 body
-    max-width: 1600px
     margin: auto
     font-family: sans-seif
+a
+    text-decoration: none
+.title-first, .title-first-featured, .title-first-services
+    margin: 0
+    font-size: 38px
+    letter-spacing: 2px
+    line-height: 28px
+    color: #000000
+    font-family: "Montserrat"
+    font-weight: 700
+    text-transform: uppercase
+    &-featured
+        margin-left: 40px
+        margin-bottom: 15px
+    &-services
+        margin-left: 0px
+        margin-top: 50px
+        margin-bottom: 10px
+
+.title-second, .title-second-featured, .title-second-services
+    margin: 0
+    font-size: 18px
+    letter-spacing: 2px
+    line-height: 28px
+    color: #000000
+    font-family: "Merriweather"
+    font-weight: 400
+    text-align: center
+    text-transform: uppercase
+    &-featured
+        line-height: 20px
+        letter-spacing: 1.3px
+    &-services
+        line-height: 20px
+        letter-spacing: 1.3px
+
 .header
     display: grid
-    min-height: 810px
-    grid-template-columns: 2fr 2fr 1fr 1.1fr
+    //min-height: 810px
+    min-height: 106vh
+    grid-template-columns: 2fr 2fr 1fr 1fr
     grid-template-areas: "header-logo . . header-btn-menu" "header-title header-title header-title header-title" ". header-btn-contact header-pic ."
     grid-template-rows: 2fr 3fr 4fr
     align-items: center
     justify-items: center
-    background-color: rgba(74, 73, 73, 0.5)
+    background-color: #eff0f2
+
+    // logo
+
 .header-logo
+    margin-left: 40px
+    margin-bottom: 3px
+    border: 5.54px solid #170f1c
+    width: 100px
+    height: 35px
     grid-area: header-logo
+    line-height: 28px
+    color: #000000
+    text-align: center
+.header-logo-text
+    margin-bottom: 0px
+    margin-top: 4px
+    font-family: 'Montserrat', sans-serif
+    font-weight: 900
+    text-transform: uppercase
+    font-size: 19px
+.header-logo-color-letter
+    color: #77efe5
+    font-size: 22px
+    text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0
+
+    //menu button
+
 .header-btn-menu
+    justify-self: start
+    font-size: 32px
     grid-area: header-btn-menu
+    margin-left: 10px
+    margin-top: 4px
+
 .header-btn-contact
     grid-area: header-btn-contact
+    border: 2px solid #000000
+    text-align: center
+    margin-bottom: 17%
+    width: 43%
+    height: 14%
+    border-radius: 2px
+.header-btn-contact-text
+    letter-spacing: 2px
+    margin-top: 7%
+    margin-bottom: 6%
+    text-transform: uppercase
+    font-size: 18px
+    font-weight: 600
+    font-family: "Montserrat"
+    color: rgba(0, 0, 0, 0.749)
+
 .header-title
+    margin-bottom: 2%
     grid-area: header-title
+    align-self: end
+    text-align: center
+    font-size: 47px
+    color: #505050
+    font-family: "Montserrat"
+    font-weight: bold
+    text-align: center
+    text-shadow: 0px 9px 10px rgba(0, 0, 0, 0.24)
+    text-transform: uppercase
+.header-title-color-letter
+    background: #77efe580
 .header-pic
+    width: 50%
+    margin-top: 24%
+    justify-self: end
     grid-area: header-pic
 
 .about
-
     display: grid
-    min-height: 986px
-    grid-template-columns: 1fr 1fr
+    //min-height: 986px
+    min-height: 129vh
+    grid-template-columns: 1fr 0.87fr
     grid-template-areas: "about-title about-title" "about-carousel about-text"
     grid-template-rows: 2fr 5fr
     align-items: center
     justify-items: center
-    background-color: rgba(123, 12,12 ,0.5 )
+    background-color: #f8fafa
     &-title
         text-align: center
         grid-area: about-title
+        &-first-position
+            margin-top: 7%
+            margin-left: 3%
+            margin-bottom: 2%
     &-carousel
         grid-area: about-carousel
     &-carousel img
         height: 50%
+
+    // about-us text
+
     &-text
+        justify-self: start
+        align-self: start
         grid-area: about-text
+        width: 60%
+        &-title, &-title-second
+            margin-top: 12%
+            text-transform: uppercase
+            font-size: 21px
+            letter-spacing: 1px
+            line-height: 28px
+            color: #000000
+            font-family: "Merriweather"
+            font-weight: 700
+        &-desc, &-desc-second, &-desc-third
+            width: 109%
+            margin-bottom: 30px
+            font-size: 16px
+            letter-spacing: 0.9px
+            line-height: 28px
+            color: #000000
+            font-family: "Raleway"
+            font-weight: 400
+        &-title-second
+            margin: 0
+            font-size: 18px
+            letter-spacing: 0.8px
+        &-desc-second
+            margin-top: 12px
+            margin-bottom: 0px
+        &-desc-third
+            margin-top: 0px
 
 .featured
 
     display: grid
-    min-height: 1165px
-    background-color: rgba(66, 43, 90, 0.8)
+    //min-height: 1165px
+    min-height: 153vh
+    background-color: #ffffff
     grid-template-rows: 1fr 5fr
     grid-template-areas: "featured-title" "featured-works"
     align-items: center
     justify-items: center
     &-title
+        text-align: center
         grid-area: featured-title
+        align-self: end
     &-works
         display: grid
         grid-area: featured-works
@@ -79,16 +223,18 @@ body
 
 .services
     display: grid
-    min-height: 1620px
-    background-color: rgba(184, 91, 111, 0.5)
+    //min-height: 1620px
+    min-height: 213vh
+    background-color: #f9fbfb
     grid-template-rows: 1fr 5fr
     grid-template-areas: "services-title" "services-items"
 
     .services-item-0
         grid-area: services-item-0
+        align-self: end
+        justify-self: end
         display: flex
-        align-content: start
-        background-color: rgb(79, 181, 206)
+        flex-direction: column
     .services-item-1
         align-self: end
         justify-self: start
@@ -115,14 +261,18 @@ body
 
 .services-title
     grid-area: services-title
+    grid-area: services-title
+    align-self: center
+    justify-self: center
+    text-align: center
 .services-items
     display: grid
+    margin-bottom: 2%
     grid-area: services-items
-    grid-template-rows: 1fr 1fr 1fr
-    grid-template-columns: 1fr 0.3fr 1fr
+    grid-template-rows: 1fr 0.8fr 1fr
+    grid-template-columns: 1fr 0.23fr 1fr
+    grid-gap: 1%
     grid-template-areas: "services-item-0 services-item-0 services-item-1" "services-item-2 services-item-2 services-item-3" "services-item-4 services-item-5 services-item-5 "
-    align-items: center
-    justify-items: center
 
 .service-item-info
     font-size: 20px
@@ -134,7 +284,7 @@ body
     min-height: 1310px
     background-color: rgba(153, 238, 142, 0.5)
     grid-template-rows: 0.7fr 1fr 1fr
-    grid-template-columns: 1fr 0.5fr 1fr
+    grid-template-columns: 1fr 0.6fr 1fr
     grid-template-areas: "team-title team-title team-title" "team-memb-1 team-memb-2 team-memb-3" "team-memb-4 team-memb-5 team-memb-6"
     align-items: center
     justify-items: center
@@ -165,7 +315,7 @@ body
 
 .reviews
     display: grid
-    min-height: 1300px
+    min-height: 1377px
     background-color: rgba(240, 207, 118, 0.5)
     grid-template-rows: 2fr 3fr 2fr
     grid-template-areas: "reviews-title" "reviews-slider" "reviews-logos"
@@ -191,3 +341,9 @@ body
     background: no-repeat url("../img/img-contacts-background.png")
     background-size: cover
     grid-template-columns: 1fr 1fr
+.follow-us
+    display: grid
+    min-height: 315px
+    justify-items: center
+    align-items: center
+    background-color: rgba(75, 59, 49, 0.5)

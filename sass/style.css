@@ -6229,6 +6229,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .services .services-item-1 {
@@ -6238,6 +6239,7 @@ a {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: services-item-1;
+  position: relative;
 }
 
 .services .services-item-2 {
@@ -6248,6 +6250,7 @@ a {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: services-item-2;
+  position: relative;
 }
 
 .services .services-item-3 {
@@ -6257,6 +6260,7 @@ a {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: services-item-3;
+  position: relative;
 }
 
 .services .services-item-4 {
@@ -6266,6 +6270,7 @@ a {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: services-item-4;
+  position: relative;
 }
 
 .services .services-item-5 {
@@ -6276,6 +6281,7 @@ a {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: services-item-5;
+  position: relative;
 }
 
 .services-title {
@@ -6303,13 +6309,47 @@ a {
   -ms-grid-columns: 1fr 0.23fr 1fr;
       grid-template-columns: 1fr 0.23fr 1fr;
   grid-gap: 1%;
+  justify-items: center;
       grid-template-areas: "services-item-0 services-item-0 services-item-1" "services-item-2 services-item-2 services-item-3" "services-item-4 services-item-5 services-item-5 ";
 }
 
-.service-item-info {
+.service-item-desc-full {
+  display: none;
+}
+
+.service-item-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 29px;
+  color: #ffffff;
+  font-family: "Merriweather";
+  font-weight: 700;
+}
+
+.service-item-info, .service-item-info-1, .service-item-info-2 {
+  margin-left: 64px;
+  margin-top: 10.6%;
   font-size: 20px;
   color: white;
   position: absolute;
+}
+
+.service-item-info-1, .service-item-info-1-1, .service-item-info-2-1 {
+  margin-top: 9.0%;
+}
+
+.service-item-info-2, .service-item-info-1-2, .service-item-info-2-2 {
+  margin-top: 6.5%;
+}
+
+.service-item-desc {
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 25px;
+  color: #ffffff;
+  font-family: "Raleway";
+  font-weight: 400;
 }
 
 .team {

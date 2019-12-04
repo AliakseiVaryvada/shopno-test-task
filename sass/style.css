@@ -5885,7 +5885,18 @@ a {
   text-decoration: none;
 }
 
-.title-first, .title-first-featured, .title-first-services, .title-first-team {
+.service-item-know-btn {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 85px;
+  color: #f9fbfb;
+  font-family: "Raleway";
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title-first, .title-first-featured, .title-first-services, .title-first-team, .title-first-reviews {
   margin: 0;
   font-size: 38px;
   letter-spacing: 2px;
@@ -5896,22 +5907,22 @@ a {
   text-transform: uppercase;
 }
 
-.title-first-featured, .title-first-featured-featured, .title-first-services-featured, .title-first-team-featured {
+.title-first-featured, .title-first-featured-featured, .title-first-services-featured, .title-first-team-featured, .title-first-reviews-featured {
   margin-left: 40px;
   margin-bottom: 15px;
 }
 
-.title-first-services, .title-first-featured-services, .title-first-services-services, .title-first-team-services {
+.title-first-services, .title-first-featured-services, .title-first-services-services, .title-first-team-services, .title-first-reviews-services {
   margin-left: 0px;
   margin-top: 50px;
   margin-bottom: 10px;
 }
 
-.title-first-team, .title-first-featured-team, .title-first-services-team, .title-first-team-team {
+.title-first-team, .title-first-featured-team, .title-first-services-team, .title-first-team-team, .title-first-reviews-team {
   margin-left: 6px;
 }
 
-.title-second, .title-second-featured, .title-second-services, .title-second-team {
+.title-second, .title-second-featured, .title-second-services, .title-second-team, .title-second-reviews {
   margin: 0;
   font-size: 18px;
   letter-spacing: 2px;
@@ -5923,20 +5934,25 @@ a {
   text-transform: uppercase;
 }
 
-.title-second-featured, .title-second-featured-featured, .title-second-services-featured, .title-second-team-featured {
+.title-second-featured, .title-second-featured-featured, .title-second-services-featured, .title-second-team-featured, .title-second-reviews-featured {
   line-height: 20px;
   letter-spacing: 1.3px;
 }
 
-.title-second-services, .title-second-featured-services, .title-second-services-services, .title-second-team-services {
+.title-second-services, .title-second-featured-services, .title-second-services-services, .title-second-team-services, .title-second-reviews-services {
   line-height: 20px;
   letter-spacing: 1.3px;
 }
 
-.title-second-team, .title-second-featured-team, .title-second-services-team, .title-second-team-team {
+.title-second-team, .title-second-featured-team, .title-second-services-team, .title-second-team-team, .title-second-reviews-team {
   margin-top: 13px;
   line-height: 20px;
   letter-spacing: 0.4px;
+}
+
+.title-second-reviews, .title-second-featured-reviews, .title-second-services-reviews, .title-second-team-reviews, .title-second-reviews-reviews {
+  letter-spacing: 0.5px;
+  margin-top: 8px;
 }
 
 .header {
@@ -6082,6 +6098,14 @@ a {
 }
 
 .about-carousel {
+  margin-top: 3%;
+  margin-left: 18%;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  max-width: 454px;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: about-carousel;
@@ -6366,7 +6390,6 @@ a {
   display: -ms-grid;
   display: grid;
   min-height: 172vh;
-  background-color: rgba(153, 238, 142, 0.5);
   -ms-grid-rows: 0.33fr 1fr 1fr;
       grid-template-rows: 0.33fr 1fr 1fr;
   -ms-grid-columns: 1fr  0.7fr 1fr;
@@ -6455,8 +6478,8 @@ a {
 .reviews {
   display: -ms-grid;
   display: grid;
-  min-height: 1377px;
-  background-color: rgba(240, 207, 118, 0.5);
+  min-height: 181vh;
+  background-color: #f9fbfb;
   -ms-grid-rows: 2fr 3fr 2fr;
       grid-template-rows: 2fr 3fr 2fr;
       grid-template-areas: "reviews-title" "reviews-slider" "reviews-logos";
@@ -6467,6 +6490,8 @@ a {
 }
 
 .reviews-title {
+  text-align: center;
+  margin-bottom: 4%;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: reviews-title;
@@ -6479,6 +6504,10 @@ a {
 }
 
 .reviews-logos {
+  margin-top: 57px;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: reviews-logos;

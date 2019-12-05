@@ -5901,7 +5901,11 @@ a {
   text-transform: uppercase;
 }
 
-.title-first, .title-first-featured, .title-first-services, .title-first-team, .title-first-reviews {
+.title-first,
+.title-first-featured,
+.title-first-services,
+.title-first-team,
+.title-first-reviews {
   margin: 0;
   font-size: 38px;
   letter-spacing: 2px;
@@ -5912,22 +5916,38 @@ a {
   text-transform: uppercase;
 }
 
-.title-first-featured, .title-first-featured-featured, .title-first-services-featured, .title-first-team-featured, .title-first-reviews-featured {
+.title-first-featured,
+.title-first-featured-featured,
+.title-first-services-featured,
+.title-first-team-featured,
+.title-first-reviews-featured {
   margin-left: 40px;
   margin-bottom: 15px;
 }
 
-.title-first-services, .title-first-featured-services, .title-first-services-services, .title-first-team-services, .title-first-reviews-services {
+.title-first-services,
+.title-first-featured-services,
+.title-first-services-services,
+.title-first-team-services,
+.title-first-reviews-services {
   margin-left: 0px;
   margin-top: 50px;
   margin-bottom: 10px;
 }
 
-.title-first-team, .title-first-featured-team, .title-first-services-team, .title-first-team-team, .title-first-reviews-team {
+.title-first-team,
+.title-first-featured-team,
+.title-first-services-team,
+.title-first-team-team,
+.title-first-reviews-team {
   margin-left: 6px;
 }
 
-.title-second, .title-second-featured, .title-second-services, .title-second-team, .title-second-reviews {
+.title-second,
+.title-second-featured,
+.title-second-services,
+.title-second-team,
+.title-second-reviews {
   margin: 0;
   font-size: 18px;
   letter-spacing: 2px;
@@ -5939,25 +5959,45 @@ a {
   text-transform: uppercase;
 }
 
-.title-second-featured, .title-second-featured-featured, .title-second-services-featured, .title-second-team-featured, .title-second-reviews-featured {
+.title-second-featured,
+.title-second-featured-featured,
+.title-second-services-featured,
+.title-second-team-featured,
+.title-second-reviews-featured {
   line-height: 20px;
   letter-spacing: 1.3px;
 }
 
-.title-second-services, .title-second-featured-services, .title-second-services-services, .title-second-team-services, .title-second-reviews-services {
+.title-second-services,
+.title-second-featured-services,
+.title-second-services-services,
+.title-second-team-services,
+.title-second-reviews-services {
   line-height: 20px;
   letter-spacing: 1.3px;
 }
 
-.title-second-team, .title-second-featured-team, .title-second-services-team, .title-second-team-team, .title-second-reviews-team {
+.title-second-team,
+.title-second-featured-team,
+.title-second-services-team,
+.title-second-team-team,
+.title-second-reviews-team {
   margin-top: 13px;
   line-height: 20px;
   letter-spacing: 0.4px;
 }
 
-.title-second-reviews, .title-second-featured-reviews, .title-second-services-reviews, .title-second-team-reviews, .title-second-reviews-reviews {
+.title-second-reviews,
+.title-second-featured-reviews,
+.title-second-services-reviews,
+.title-second-team-reviews,
+.title-second-reviews-reviews {
   letter-spacing: 0.5px;
   margin-top: 8px;
+}
+
+.head {
+  background-color: #eff0f2;
 }
 
 .header {
@@ -5973,7 +6013,12 @@ a {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  background-color: #eff0f2;
+}
+
+@media (max-width: 1025px) {
+  .header {
+    height: auto;
+  }
 }
 
 .header-logo {
@@ -6006,6 +6051,7 @@ a {
 }
 
 .header-btn-menu {
+  color: black;
   -ms-grid-column-align: start;
       justify-self: start;
   font-size: 32px;
@@ -6014,6 +6060,14 @@ a {
   grid-area: header-btn-menu;
   margin-left: 10px;
   margin-top: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-btn-menu:hover {
+  color: #77efe5;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .header-btn-contact {
@@ -6026,6 +6080,19 @@ a {
   width: 43%;
   height: 14%;
   border-radius: 2px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media (max-width: 1000px) {
+  .header-btn-contact {
+    width: auto;
+    height: auto;
+  }
+}
+
+.header-btn-contact:hover {
+  background-color: #77efe5;
 }
 
 .header-btn-contact-text {
@@ -6088,6 +6155,15 @@ a {
   background-color: #f8fafa;
 }
 
+@media (max-width: 1025px) {
+  .about {
+    -ms-grid-rows: 2fr 3fr 2fr;
+        grid-template-rows: 2fr 3fr 2fr;
+        grid-template-areas: "about-title about-title" "about-carousel about-carousel" "about-text about-text";
+    height: auto;
+  }
+}
+
 .about-title {
   text-align: center;
   -ms-grid-row: 1;
@@ -6100,6 +6176,12 @@ a {
   margin-top: 7%;
   margin-left: 3%;
   margin-bottom: 2%;
+}
+
+@media (max-width: 1025px) {
+  .about-title-first-position {
+    margin: 0;
+  }
 }
 
 .about-carousel {
@@ -6116,6 +6198,15 @@ a {
   grid-area: about-carousel;
 }
 
+@media (max-width: 1025px) {
+  .about-carousel {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0;
+  }
+}
+
 .about-carousel img {
   height: 50%;
 }
@@ -6130,6 +6221,14 @@ a {
   -ms-grid-column: 2;
   grid-area: about-text;
   width: 60%;
+}
+
+@media (max-width: 1025px) {
+  .about-text {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
 }
 
 .about-text-title, .about-text-title-second {
@@ -6246,13 +6345,16 @@ a {
 .shape {
   border: 12px solid transparent;
   border-bottom: 24px solid #77efe5;
-  display: none;
+  display: block;
+  opacity: 0;
   position: absolute;
   width: 0;
   height: 0;
   z-index: 10;
   margin-top: 39%;
   margin-left: 10%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .services {
@@ -6442,7 +6544,10 @@ a {
   height: 54%;
   margin-top: 47%;
   background: #6ff5eb;
-  display: none;
+  display: block;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .team-memb-1 {
@@ -6458,7 +6563,7 @@ a {
 
 .team-memb-1:hover .shape,
 .team-memb-1:hover .team-memb-info {
-  display: block;
+  opacity: 1;
 }
 
 .team-memb-2 {
@@ -6472,7 +6577,7 @@ a {
 
 .team-memb-2:hover .shape,
 .team-memb-2:hover .team-memb-info {
-  display: block;
+  opacity: 1;
 }
 
 .team-memb-3 {
@@ -6488,7 +6593,7 @@ a {
 
 .team-memb-3:hover .shape,
 .team-memb-3:hover .team-memb-info {
-  display: block;
+  opacity: 1;
 }
 
 .team-memb-4 {
@@ -6504,7 +6609,7 @@ a {
 
 .team-memb-4:hover .shape,
 .team-memb-4:hover .team-memb-info {
-  display: block;
+  opacity: 1;
 }
 
 .team-memb-5 {
@@ -6518,7 +6623,7 @@ a {
 
 .team-memb-5:hover .shape,
 .team-memb-5:hover .team-memb-info {
-  display: block;
+  opacity: 1;
 }
 
 .team-memb-6 {
@@ -6534,20 +6639,10 @@ a {
 
 .team-memb-6:hover .shape,
 .team-memb-6:hover .team-memb-info {
-  display: block;
+  opacity: 1;
 }
 
 .reviews {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: #f9fbfb;
 }
 

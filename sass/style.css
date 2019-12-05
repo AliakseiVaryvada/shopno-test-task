@@ -6498,6 +6498,7 @@ a {
 }
 
 .reviews-slider {
+  max-width: 500px;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: reviews-slider;
@@ -6521,13 +6522,14 @@ a {
       grid-template-areas: "reviews-slider-avatar" "reviews-slider-text";
 }
 
-.reviews-slider-slider-avatar {
+reviews-slider-block-avatar {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: reviews-slider-avatar;
 }
 
-.reviews-slider-slider-text {
+.reviews-slider-block-text {
+  font-size: 25px;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: reviews-slider-text;

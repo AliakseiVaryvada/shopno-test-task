@@ -1,3 +1,8 @@
+$fa-font-path: '../node_modules/@fortawesome/fontawesome-free/webfonts'
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome'
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid'
+@import '../node_modules/@fortawesome/fontawesome-free/scss/regular'
+
 *, *:before, *:arter
     box-sizing: border-box
 img
@@ -242,6 +247,17 @@ a
 .featured-work-6
     grid-area: featured-work-6
 
+.shape
+    border: 12px solid transparent
+    border-bottom: 24px solid #77efe5
+    display: none
+    position: absolute
+    width: 0
+    height: 0
+    z-index: 10
+    margin-top: 39%
+    margin-left: 10%
+
 .services
     display: grid
     //min-height: 1620px
@@ -337,7 +353,7 @@ a
     display: grid
     //min-height: 1310px
     min-height: 172vh
-    background-color:
+    background-color: #ffffff
     grid-template-rows: 0.33fr 1fr 1fr
     grid-template-columns: 1fr  1fr 1fr
     grid-template-areas: "team-title team-title team-title" "team-memb-1 team-memb-2 team-memb-3" "team-memb-4 team-memb-5 team-memb-6"
@@ -348,50 +364,85 @@ a
     &-title
         align-self: end
         grid-area: team-title
+    &-memb-position
+        position: relative
+    &-memb-info
+        margin-left: 5%
+        position: absolute
+        width: 91%
+        height: 54%
+        margin-top: 47%
+        background: #6ff5eb
+        display: none
     &-memb-1
         justify-self: end
         align-self: end
         grid-area: team-memb-1
+
+    &-memb-1:hover .shape,
+    &-memb-1:hover .team-memb-info
+        display: block
+
     &-memb-2
         align-self: end
         grid-area: team-memb-2
+
+    &-memb-2:hover .shape,
+    &-memb-2:hover .team-memb-info
+        display: block
+
     &-memb-3
         justify-self: start
         align-self: end
         grid-area: team-memb-3
+
+    &-memb-3:hover .shape,
+    &-memb-3:hover .team-memb-info
+        display: block
+
     &-memb-4
         justify-self: end
         align-self: start
         grid-area: team-memb-4
+
+    &-memb-4:hover .shape,
+    &-memb-4:hover .team-memb-info
+        display: block
+
     &-memb-5
         align-self: start
         grid-area: team-memb-5
+
+    &-memb-5:hover .shape,
+    &-memb-5:hover .team-memb-info
+        display: block
+
     &-memb-6
         justify-self: start
         align-self: start
         grid-area: team-memb-6
 
+    &-memb-6:hover .shape,
+    &-memb-6:hover .team-memb-info
+        display: block
+
 .reviews
-    display: grid
+    display: flex
+    flex-direction: column
+    justify-content: center
     //min-height: 1377px
-    min-height: 181vh
+    //min-height: 181vh
     background-color: #f9fbfb
-    grid-template-rows: 1.2fr 3fr 2fr
-    grid-template-areas: "reviews-title" "reviews-slider" "reviews-logos"
-    align-items: center
-    justify-items: center
     &-title
         text-align: center
-        margin-top: 4%
+        margin-top: 8%
         grid-area: reviews-title
     &-slider
         align-self: flex-start
         max-width: 1500px
-        grid-area: reviews-slider
     &-logos
-        margin-top: 57px
-        align-self: start
-        grid-area: reviews-logos
+        align-self: center
+        margin-top: 17%
 
 .reviews-slider
     display: grid
@@ -422,7 +473,7 @@ a
     grid-area: reviews-slider-avatar
 
 .reviews-slider-block
-    margin-top: 1%
+    margin-top: 123px
 
 .reviews-slider-block-text
     margin-left: 130px

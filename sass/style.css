@@ -6484,7 +6484,6 @@ a {
   display: -ms-grid;
   display: grid;
   min-height: 181vh;
-  width: 100%;
   max-width: 1500px;
   background-color: #f9fbfb;
   -ms-grid-rows: 1.2fr 3fr 2fr;
@@ -6507,6 +6506,7 @@ a {
 .reviews-slider {
   -ms-flex-item-align: start;
       align-self: flex-start;
+  max-width: 1500px;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: reviews-slider;
